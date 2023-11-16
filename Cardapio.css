@@ -1,0 +1,263 @@
+/* HOME */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Skranji', sans-serif ;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.LOGO_IMG {
+    width: 200px;
+    padding: auto;
+    margin-left: 40%;
+    display: flex;
+
+}
+
+.menu-hamburguer {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    margin-right: 30%;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    transition: 0.4s;
+}
+
+/* NAVBAR */
+
+header {
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16%;
+    height: 170px;
+    transition: all .50s ease;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0 30px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover{
+    color: #fb6404;
+}
+
+.navbar a.active {
+    color: #fb6404;
+}
+
+.cardapio_title{
+    margin-top: 200px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #333; 
+    color: #fff; 
+    text-align: center; 
+    padding: 10px; 
+    width: 100%;
+    bottom: 0; 
+}
+
+
+h3{
+    font-size: 40px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+/* PRODUTOS CARDAPIO */
+
+.produto_tesouro{
+    width: 200px;
+    height: 200px; 
+    padding: 10px;
+    border-radius: 13%;
+}
+
+.img_cardapio{
+    display: flex;
+    justify-content: center;
+}
+
+.produto{
+    width: 380px;
+    height: 400px;
+    background-image: url(img/barrel.png);
+    background-size: 300px 394px;
+    background-repeat: no-repeat; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 5px 160px 5px;
+    margin: 0px 20px 0px 20px;
+
+}
+.conteudo{
+    padding-top: 68px;
+}
+.produto:hover{
+    .texto-produto{
+        color: #ff0000;
+    }
+    .titulo-produto{
+        color: red;
+        font-size: 20px;
+    }
+}
+
+.texto-produto, .titulo-produto{
+    color: #fff;
+    text-align: center;
+    width: 244px;
+}
+.texto-produto{
+    height: 176px;
+}
+.titulo-cardapio{
+    padding-bottom: 200px;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px) {
+    header {
+        padding: 1px 0;
+        transition: .2s;
+    }
+    .navbar a {
+        padding: 5px  0;
+        margin: 0px 20px;
+    }
+
+    footer{
+        padding: 10px 16%;
+    }
+
+
+    .navbar {
+        display: flex;
+        position: absolute;
+        top: 190px;
+        right: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        transition: all 0.5s ease;
+    }
+
+    .navbar.active {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .navbar a {
+        color: black;
+        font-size: 1.1rem;
+        font-weight: 500;
+
+        padding: 10px 0;
+        margin: 0;
+        transition: all .50s ease;
+    }
+
+    .navbar a:hover {
+        color: red;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .menu-hamburguer {
+        background-color: white;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+
+    footer{
+        padding: 10px 16%;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 190px;
+        right: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        transition: all 0.5s ease;
+    }
+
+    .navbar.active {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .navbar a {
+        color: black;
+        font-size: 1.1rem;
+        font-weight: 500;
+
+        padding: 10px 0;
+        margin: 0;
+        transition: all .50s ease;
+    }
+
+    .navbar a:hover {
+        color: red;
+    }
+}
+
